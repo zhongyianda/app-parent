@@ -1,0 +1,55 @@
+<!-- (*) classes assigned or controller -->
+
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-assertive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-ios-drag" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+  <!-- *controller MenuActiveCtrl /  active items menu -->
+  <ion-side-menu side="left" expose-aside-when="large" ng-controller="MenuActiveCtrl">
+    <!-- button in header-bar -->
+    <!--<ion-header-bar>-->
+      <!--<button class="button button-icon icon ion-ios-compose-outline"></button>-->
+    <!--</ion-header-bar>-->
+    <ion-content>
+      <ul class="list">
+        <!-- item-avatar user with status -->
+        <a class="item item-avatar" nav-clear menu-close href="#/app/profile">
+         <img src="http://ac-p6974wya.clouddn.com/b5a5c1677f9954f8.jpg">
+          <h2>{{currentPerson.name}}</h2>
+          联系方式：{{currentPerson.cellphone}}
+        </a>
+        <!-- menu items  with style active, inactive on off -->
+        <a class="item item-icon-left" ng-class="{active:isActive('/app/bus-profile')}" nav-clear menu-close
+           href="#/app/bus-profile">
+          <i class="icon ion-ios-list-outline"></i>校车
+        </a>
+		<!--
+        <a class="item item-icon-left" ng-class="{active:isActive('/app/notifications')}" nav-clear menu-close
+           href="#/app/notifications">
+          <i class="icon ion-ios-bell-outline"></i>通知
+        </a>
+		-->
+        <a class="item item-icon-left" ng-class="{active:isActive('/app/profile')}" nav-clear menu-close
+           href="#/app/profile">
+          <i class="icon ion-ios-person-outline"></i>我的
+        </a>
+        <!--<a class="item item-icon-left" nav-clear menu-close ng-click="login()">-->
+        <!--<i class="icon ion-ios-locked-outline"></i>Login-->
+        <!--</a>-->
+        <!-- *class quit / style logout -->
+        <a class="item item-icon-left quit" nav-clear menu-close ng-click="infoApp2()">
+          <i class="icon ion-ios-arrow-thin-right"></i>登出
+        </a>
+      </ul>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

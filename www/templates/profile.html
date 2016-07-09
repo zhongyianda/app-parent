@@ -1,0 +1,58 @@
+<!-- (*) assigned classes -->
+
+<ion-view view-title="我的信息">
+  <!--<ion-nav-buttons side="right">-->
+  <!--<button class="button button-icon ion-ios-checkmark-empty"></button>-->
+  <!--</ion-nav-buttons>-->
+  <ion-content>
+    <!-- *view-profile / container -->
+    <div class="view-profile">
+      <!-- *profile-bg / background color -->
+      <div class="profile-bg">
+        <a class="item item-avatar" nav-clear>
+          <!-- *content-img / container -->
+          <div class="content-img">
+            <img src="http://ac-p6974wya.clouddn.com/b5a5c1677f9954f8.jpg">
+            <!-- *bg-img -->
+            <!--<div class="bg-img"></div>-->
+          </div>
+          <h2>{{currentPerson.name}}<br>联系方式：{{currentPerson.cellphone}}</h2>
+          
+        </a>
+      </div>
+      <!-- button bar with style FOLLOWER / FOLLOWING -->
+      <div class="button-bar">
+        <a class="button">
+          <h2>上地东里 - 清华附小</h2>
+        </a>
+        <!--<a class="button">-->
+        <!--<h2>2450</h2>-->
+        <!--<p>剩余服务天数</p>-->
+        <!--</a>-->
+      </div>
+      <!-- list with inputs style -->
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <ion-label>家长姓名</ion-label>
+		  <p>{{currentPerson.parentName}}</p>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <ion-label>联系手机号</ion-label>
+          <p>{{currentPerson.cellphone}}</p>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <ion-label>孩子姓名</ion-label>
+          <p>{{currentPerson.name}}</p>
+        </label>
+		<label class="item item-input item-stacked-label">
+          <ion-label>居住地</ion-label>
+          <p>上地东里（虚拟）</p>
+        </label>
+		<label class="item item-input item-stacked-label">
+          <ion-label>学校</ion-label>
+          <p>清华附小（虚拟）</p>
+        </label>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,54 @@
+<!-- (*) assigned classes -->
+<ion-view view-title="车上人员">
+  <ion-content>
+    <ion-list>
+      <!-- *class date / style for date -->
+      <div class="item item-divider date">
+        <i class="icon ion-ios-calendar-outline"></i>
+        乘客
+        <span class="item-note">{{students.length}}</span>
+      </div>
+	  <ion-item ng-repeat="student in students" class="item-avatar item-button-right">
+        <img src="img/nopic.jpg">
+        <h2>{{student.name}}</h2>
+        <!-- *class time / icon time -->
+        <p class="time">
+          {{student.gender}}
+        </p>
+        
+      </ion-item>
+	  
+	  
+	  
+      <div class="item item-divider date">
+        <i class="icon ion-ios-calendar-outline"></i>
+        工作人员
+        <span class="item-note">3</span>
+      </div>
+      <ion-item class="item-avatar item-button-right">
+        <img src="img/nopic.jpg">
+		<h2>{{driver.name}}</h2>
+        <p class="time">
+          司机
+        </p>
+        <!--<a class="button button-icon icon ion-ios-minus-outline following"></a>-->
+      </ion-item>
+      <ion-item class="item-avatar item-button-right">
+        <img src="img/nopic.jpg">
+        <h2>{{teacher.name}}</h2>
+        <p class="time">
+          乘务员
+        </p>
+        <!--<a class="button button-icon icon ion-ios-plus-outline follower"></a>-->
+      </ion-item>
+      <ion-item class="item-avatar item-button-right">
+        <img src="img/nopic.jpg">
+        <h2>{{security.name}}</h2>
+        <p class="time">
+          保安
+        </p>
+        <!--<a class="button button-icon icon ion-ios-plus-outline follower"></a>-->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

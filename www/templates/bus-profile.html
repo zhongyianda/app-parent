@@ -1,0 +1,76 @@
+<!-- (*) assigned classes -->
+
+<ion-view view-title="您的校车">
+  <!--<ion-nav-buttons side="right">-->
+  <!--<button class="button button-icon ion-ios-checkmark-empty"></button>-->
+  <!--</ion-nav-buttons>-->
+  <ion-content>
+    <!-- *view-profile / container -->
+    <div class="view-profile">
+      <!-- *profile-bg / background color -->
+      <div class="profile-bg">
+        <a class="item item-avatar" nav-clear>
+          <!-- *content-img / container -->
+          <div class="content-img">
+            <img src="img/logo.png">
+            <!-- *bg-img -->
+            <!--<div class="bg-img"></div>-->
+          </div>
+          <h2>校车</h2>
+          <p>京B4195</p>
+        </a>
+      </div>
+      <!-- button bar with style FOLLOWER / FOLLOWING -->
+      <div class="button-bar">
+        <a class="button" href="#/app/passengers">
+          <h2>6</h2>
+          <p>乘客量</p>
+        </a>
+        <a class="button" href="#/app/passengers">
+          <h2>3</h2>
+          <p>工作人员</p>
+        </a>
+      </div>
+    </div>
+    <div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+      <!-- list card -->
+      <div class="list card">
+        <div class="item">
+          <h2>运行图</h2>
+		 
+		  
+        </div>
+        <div class="item item-image">
+		 <img id="route-staticmapcontainer" style="width:100%" ng-src="{{routeUrl}}"/>
+        </div>
+      </div>
+      <div class="list card" ng-click="openMonitor()">
+        <div class="item">
+          <h2>监控</h2>
+        </div>
+        <div class="item item-image">
+          <img src="http://pili-static.trysenz.com/">
+          <p class="social-img-down">
+            <a>
+              查看实时
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="list card">
+        <label class="item item-stacked-label">
+          <ion-label>司机</ion-label>
+          <p>{{driver.name}}</p>
+        </label>
+        <label class="item item-stacked-label">
+          <ion-label>乘务员</ion-label>
+          <p>{{teacher.name}}</p>
+        </label>
+        <label class="item item-stacked-label">
+          <ion-label>保安</ion-label>
+          <p>{{security.name}}</p>
+        </label>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
